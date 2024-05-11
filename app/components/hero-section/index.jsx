@@ -24,7 +24,7 @@ function HeroSection({ profile }) {
             />
           </div>
           <p className="text-gray-300 text-sm lg:text-base my-4 lg:my-6 text-center">
-            {profile.bio}
+            {profile.bio || '⚡Crazy programmer! Professional & Ambitious. I love the wide range of stacks of Software Engineering that includes Frontend, Backend,DevOps,Blockchain,AI,ML,DL,LLM⚡'}
           </p>
 
           <div className="w-full flex justify-center items-center gap-5">
@@ -146,8 +146,10 @@ function HeroSection({ profile }) {
                 <span className="text-gray-400">{"'],"}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">hireable:</span>
-                <span className="text-orange-400">{profile?.hireable.toString()}</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">Available for Hire:YES</span>
+                <span className="text-orange-400">{profile?.hireable}</span>
+                {/* <span className="text-orange-400">{profile?.hireable ? profile.hireable.toString() : 'N/A'}</span> */}
+
                 <span className="text-gray-400">,</span>
               </div>
               <div><span className="text-gray-400">{`};`}</span></div>

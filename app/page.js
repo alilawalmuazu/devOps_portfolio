@@ -50,5 +50,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   return {
     title: `GitHub Profile of ${profile.name}`,
     description: profile.description,
+    /* profile.avatar_url */
+    /* favicon: profile.avatar_url, */
   };
 };
